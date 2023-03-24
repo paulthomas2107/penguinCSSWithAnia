@@ -30,6 +30,9 @@ body {
   border-radius: 70% 70% 65% 65%;
   height: 45%;
   background: linear-gradient(45deg, gray, rgb(239, 240, 228));
+  top: 10%;
+  left: 25%;
+  z-index: 1;
 }
 
 .penguin-body {
@@ -42,6 +45,22 @@ body {
     rgb(234, 231, 231) 25%,
     white 67%
   );
+  top: 40%;
+  left: 23.5%;
+}
+
+.penguin-body::before {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 45%;
+  background-color: gray;
+  top: 10%;
+  left: 25%;
+}
+
+.penguin * {
+  position: absolute;
 }
 
 .left-mountain {
