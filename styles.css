@@ -1,6 +1,7 @@
 :root {
   --penguin-face: white;
   --penguin-foot-beak: orange;
+  --penguin-gray: gray;
 }
 
 body {
@@ -28,13 +29,21 @@ body {
   margin-top: 75px !important;
   width: 300px;
   height: 300px;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0ms;
+}
+
+.penguin:active {
+  transform: scale(1.5);
+  cursor: not-allowed;
 }
 
 .penguin-head {
   width: 50%;
   border-radius: 70% 70% 65% 65%;
   height: 45%;
-  background: linear-gradient(45deg, gray, rgb(239, 240, 228));
+  background: linear-gradient(45deg, var(--penguin-gray), rgb(239, 240, 228));
   top: 10%;
   left: 25%;
   z-index: 1;
@@ -59,7 +68,7 @@ body {
   position: absolute;
   width: 50%;
   height: 45%;
-  background-color: gray;
+  background-color: var(--penguin-gray);
   top: 10%;
   left: 25%;
   border-radius: 0% 0% 100% 100%;
@@ -191,6 +200,31 @@ body {
   transform: rotate(-80deg);
 }
 
+.arm {
+  width: 30%;
+  height: 60%;
+  background: linear-gradient(90deg, var(--penguin-gray), rgb(209, 210, 199));
+  border-radius: 30% 30% 30% 120%;
+  z-index: -1;
+}
+
+.arm.left {
+  top: 35%;
+  left: 5%;
+  transform-origin: top left;
+  transform: rotate(130deg) scaleX(-1);
+  animation-name: wave;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.arm.right {
+  top: 0%;
+  right: -5%;
+  transform: rotate(-45deg);
+}
+
 .left-mountain {
   position: absolute;
   z-index: 2;
@@ -220,4 +254,19 @@ body {
   border-radius: 50%;
   top: -75px;
   right: -75px;
+}
+
+@keyframes wave {
+  10% {
+    transform: rotate(110deg) scaleX(-1);
+  }
+  20% {
+    transform: rotate(130deg) scaleX(-1);
+  }
+  30% {
+    transform: rotate(110deg) scaleX(-1);
+  }
+  40% {
+    transform: rotate(130deg) scaleX(-1);
+  }
 }
