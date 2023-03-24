@@ -10,6 +10,7 @@ body {
 .ground {
   width: 100vw;
   height: 400px;
+  margin-top: -58px;
   background: linear-gradient(90deg, rgb(88, 175, 236), rgb(182, 255, 255));
   position: absolute;
   z-index: 3;
@@ -23,7 +24,32 @@ body {
 }
 
 .left-mountain {
+  position: absolute;
+  z-index: 2;
+  transform: skew(0deg, 45deg);
+  margin-top: 100px;
   width: 300px;
   height: 300px;
   background: linear-gradient(rgb(203, 241, 228), rgb(80, 183, 255));
+}
+
+.back-mountain {
+  position: absolute;
+  transform: rotate(45deg);
+  left: 110px;
+  top: 225px;
+  z-index: 1;
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(rgb(203, 241, 228), rgb(47, 170, 255));
+}
+
+.sun {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-color: yellow;
+  border-radius: 50%;
+  top: -75px;
+  right: -75px;
 }
