@@ -17,10 +17,31 @@ body {
 }
 
 .penguin {
+  position: relative;
+  z-index: 4;
   margin: auto;
   margin-top: 75px !important;
   width: 300px;
   height: 300px;
+}
+
+.penguin-head {
+  width: 50%;
+  border-radius: 70% 70% 65% 65%;
+  height: 45%;
+  background: linear-gradient(45deg, gray, rgb(239, 240, 228));
+}
+
+.penguin-body {
+  width: 53%;
+  height: 45%;
+  border-radius: 80% 80% 100% 100%;
+  background: linear-gradient(
+    45deg,
+    rgb(134, 133, 133) 0%,
+    rgb(234, 231, 231) 25%,
+    white 67%
+  );
 }
 
 .left-mountain {
